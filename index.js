@@ -12,8 +12,8 @@ app.post('/api',(req,res)=>{
     if(req.body.queryResult.parameters['basic_card']){
 
         res.status(200).json({
-            'fulfillmetText': 'Reply for basic card',
-            'fulfullmentMessage':[
+           // 'fulfillmetText': 'Reply for basic card',
+            'fulfillmentMessages':[
                 {
                     'card':{
                         'title':'Basic Card',
@@ -34,8 +34,8 @@ app.post('/api',(req,res)=>{
 
     if(req.body.queryResult.parameters['list']){
         res.status(200).json({
-            'fulfillmetText': 'Reply for List card',
-            'fulfullmentMessage':[
+           // 'fulfillmetText ': 'Reply for List card',
+            'fulfillmentMessages':[
                 {
                     'card':{
                         'title':'Basic Card',
@@ -56,8 +56,8 @@ app.post('/api',(req,res)=>{
     }
     else{
         res.status(200).json({
-            'fulfillmetText': 'Quick Reply',
-            'fulfullmentMessage':[
+          //  'fulfillmetText': 'Quick Reply',
+            'fulfillmentMessages':[
                 {
                     'quickReplies':{
                         'title':'check out',
