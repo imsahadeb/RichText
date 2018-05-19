@@ -9,10 +9,10 @@ app.use(
   app.use(bodyParser.json());
 app.post('/api',(req,res)=>{
 
-    if(req.body.queryResult.parameters['basic_card']){
+    if(req.body.queryResult.parameters['type']=='basic_card'){
 
         res.status(200).json({
-            "fulfillmentText": "This is a text response",
+            "fulfillmentText": "This is a example of basic card",
                     "fulfillmentMessages": [
                       {
                         "card": {
@@ -32,10 +32,10 @@ app.post('/api',(req,res)=>{
         res.end();
     }
 
-    if(req.body.queryResult.parameters['list']){
+    if(req.body.queryResult.parameters['type']=='list'){
 
-        res.status.json({
-            "fulfillmentText": "This is a text response",
+        res.status(200).json({
+            "fulfillmentText": "This is a example of list",
                     "fulfillmentMessages": [
                       {
                         "card": {
@@ -52,6 +52,12 @@ app.post('/api',(req,res)=>{
                       }
                     ]
         });
+        res.end();
+    }
+    else{
+        res.status(200).json({
+            "fulfillmentText": "nothing special"
+        })
         res.end();
     }
     
