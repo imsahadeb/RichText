@@ -59,6 +59,15 @@ app.post('/api',(req,res)=>{
     if(req.body.queryResult.parameters['list']){
 
         res.status(200).json({
+            "fulfillmentMessages": [
+                {
+                  "text": {
+                    "text": [
+                      "This is List!"
+                    ]
+                  }
+                },
+          {
             "messages": [
                 {
                   "items": [
@@ -96,7 +105,8 @@ app.post('/api',(req,res)=>{
                   "type": "list_card"
                 }
               ]
-                  
+            }
+            ]     
         });
         res.end();
     }
