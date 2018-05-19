@@ -12,115 +12,63 @@ app.post('/api',(req,res)=>{
     if(req.body.queryResult.parameters['basic_card']){
 
         res.status(200).json({
-            
-            "fulfillmentMessages": [
+            'fulfillmetText': 'Reply for basic card',
+            'fulfullmentMessage':[
                 {
-                  "text": {
-                    "text": [
-                      "This is Basic Card!"
-                    ]
-                  }
-                },
-                {
-                  "card": {
-                    "title": "Basic Card",
-                    "subtitle": "Did you know that temperature is really just a measure of how fast molecules are vibrating around?! 😱",
-                    "imageUri": "http://www.candoability.com.au/images/basics%20card.bmp",
-                    "buttons": [
-                      {
-                        "text": "Temperature Wikipedia Page",
-                        "postback": "https://en.wikipedia.org/wiki/Temperature"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "text": {
-                    "text": [
-                      "I can convert Celsuis to Fahrenheit and Fahrenheit to Celsius! What temperature would you like to convert?"
-                    ]
-                  }
-                },
-                {
-                  "quickReplies": {
-                    "quickReplies": [
-                      "27° Celsius",
-                      "-40° Fahrenheit",
-                      "Cancel"
-                    ]
-                  }
+                    'card':{
+                        'title':'Basic Card',
+                        'subtitle':'hi this is basic card',
+                        'imageUri':'https://images.pexels.com/photos/39517/rose-flower-blossom-bloom-39517.jpeg',
+                        'buttons':[
+                            {
+                                'text':'click here',
+                                'postback': 'https://images.pexels.com'
+                            }
+                        ]
+                    }
                 }
-              ]
-                
-               });
+            ]
+       });
         res.end();
     }
 
     if(req.body.queryResult.parameters['list']){
-
         res.status(200).json({
-            "fulfillmentMessages": [
+            'fulfillmetText': 'Reply for List card',
+            'fulfullmentMessage':[
                 {
-                  "text": {
-                    "text": [
-                      "This is List!"
-                    ]
-                  }
-                },
-                {
-                  "items": [
-                    {
-                      "description": "Item One Description",
-                      "image": {
-                        "url": "http://www.candoability.com.au/images/basics%20card.bmp"
-                      },
-                      "optionInfo": {
-                        "key": "itemOne",
-                        "synonyms": [
-                          "thing one",
-                          "object one"
+                    'card':{
+                        'title':'Basic Card',
+                        'subtitle':'hi this is basic card',
+                        'imageUri':'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bluebonnet-8100.jpg/256px-Bluebonnet-8100.jpg',
+                        'buttons':[
+                            {
+                                'text':'click here',
+                                'postback': 'https://images.pexels.com'
+                            }
                         ]
-                      },
-                      "title": "Item One"
-                    },
-                    {
-                      "description": "Item Two Description",
-                      "image": {
-                        "url": "http://www.candoability.com.au/images/basics%20card.bmp"
-                      },
-                      "optionInfo": {
-                        "key": "itemTwo",
-                        "synonyms": [
-                          "thing two",
-                          "object two"
-                        ]
-                      },
-                      "title": "Item Two"
                     }
-                  ],
-                  "platform": "google",
-                  "title": "Title",
-                  "type": "list_card"
                 }
-               ]     
+            ]
         });
+
         res.end();
     }
     else{
         res.status(200).json({
-            
-            "suggestions": [
+            'fulfillmetText': 'Quick Reply',
+            'fulfullmentMessage':[
                 {
-                  "title": "Kelvin"
-                },
-                {
-                  "title": "Rankine"
-                },
-                {
-                  "title": "Cancel"
+                    'quickReplies':{
+                        'title':'check out',
+                        'quickReplies':[
+                            'sahadeb',
+                            'barman'
+                        ]
+                    }
                 }
-              ]
-        })
+            ]
+        });
         res.end();
     }
     
