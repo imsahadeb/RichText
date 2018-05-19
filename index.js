@@ -67,8 +67,6 @@ app.post('/api',(req,res)=>{
                     ]
                   }
                 },
-          {
-            "messages": [
                 {
                   "items": [
                     {
@@ -104,9 +102,7 @@ app.post('/api',(req,res)=>{
                   "title": "Title",
                   "type": "list_card"
                 }
-              ]
-            }
-            ]     
+               ]     
         });
         res.end();
     }
