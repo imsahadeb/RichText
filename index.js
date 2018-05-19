@@ -17,15 +17,15 @@ app.post('/api',(req,res)=>{
                 {
                   "text": {
                     "text": [
-                      "Welcome to the temperature converter!"
+                      "This is Basic Card!"
                     ]
                   }
                 },
                 {
                   "card": {
-                    "title": "Vibrating molecules",
+                    "title": "Basic Card",
                     "subtitle": "Did you know that temperature is really just a measure of how fast molecules are vibrating around?! 😱",
-                    "imageUri": "https://upload.wikimedia.org/wikipedia/commons/2/23/Thermally_Agitated_Molecule.gif",
+                    "imageUri": "http://www.candoability.com.au/images/basics%20card.bmp",
                     "buttons": [
                       {
                         "text": "Temperature Wikipedia Page",
@@ -63,15 +63,15 @@ app.post('/api',(req,res)=>{
                 {
                   "text": {
                     "text": [
-                      "Welcome to the temperature converter!"
+                      "List Card"
                     ]
                   }
                 },
                 {
                   "card": {
-                    "title": "Vibrating molecules",
+                    "title": "List Card",
                     "subtitle": "Did you know that temperature is really just a measure of how fast molecules are vibrating around?! 😱",
-                    "imageUri": "https://upload.wikimedia.org/wikipedia/commons/2/23/Thermally_Agitated_Molecule.gif",
+                    "imageUri": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Lillium_Stamens.jpg/800px-Lillium_Stamens.jpg",
                     "buttons": [
                       {
                         "text": "Temperature Wikipedia Page",
