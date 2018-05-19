@@ -11,7 +11,7 @@ app.post('/api',(req,res)=>{
 
     if(req.body.queryResult.parameters['basic_card']){
 
-        res.json({
+        res.status(200).json({
             "fulfillmentText": "This is a text response",
                     "fulfillmentMessages": [
                       {
@@ -34,7 +34,7 @@ app.post('/api',(req,res)=>{
 
     if(req.body.queryResult.parameters['list']){
 
-        res.json({
+        res.status.json({
             "fulfillmentText": "This is a text response",
                     "fulfillmentMessages": [
                       {
