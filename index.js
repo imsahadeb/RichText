@@ -27,7 +27,18 @@ app.post('/api',(req,res)=>{
                           ]
                         }
                       }
-                    ]
+                    ],
+                    "suggestions": [
+                        {
+                          "title": "Kelvin"
+                        },
+                        {
+                          "title": "Rankine"
+                        },
+                        {
+                          "title": "Cancel"
+                        }
+                      ]
         });
         res.end();
     }
@@ -50,13 +61,35 @@ app.post('/api',(req,res)=>{
                           ]
                         }
                       }
-                    ]
+                    ],
+                    "suggestions": [
+                        {
+                          "title": "Kelvin"
+                        },
+                        {
+                          "title": "Rankine"
+                        },
+                        {
+                          "title": "Cancel"
+                        }
+                      ]
         });
         res.end();
     }
     else{
         res.status(200).json({
-            "fulfillmentText": "nothing special"
+            "fulfillmentText": "nothing special",
+            "suggestions": [
+                {
+                  "title": "Kelvin"
+                },
+                {
+                  "title": "Rankine"
+                },
+                {
+                  "title": "Cancel"
+                }
+              ]
         })
         res.end();
     }
