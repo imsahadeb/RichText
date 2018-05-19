@@ -29,6 +29,7 @@ app.post('/api',(req,res)=>{
                       }
                     ]
         });
+        res.end();
     }
 
     if(req.body.queryResult.parameters['list']){
@@ -51,6 +52,7 @@ app.post('/api',(req,res)=>{
                       }
                     ]
         });
+        res.end();
     }
     
 });
