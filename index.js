@@ -9,76 +9,101 @@ app.use(
   app.use(bodyParser.json());
 app.post('/api',(req,res)=>{
 
-    if(req.body.queryResult.parameters['type']=='basic_card'){
+    if(req.body.queryResult.parameters['basic_card']){
 
         res.status(200).json({
-            "fulfillmentText": "This is a example of basic card",
-                    "fulfillmentMessages": [
+            
+            "fulfillmentMessages": [
+                {
+                  "text": {
+                    "text": [
+                      "Welcome to the temperature converter!"
+                    ]
+                  }
+                },
+                {
+                  "card": {
+                    "title": "Vibrating molecules",
+                    "subtitle": "Did you know that temperature is really just a measure of how fast molecules are vibrating around?! 😱",
+                    "imageUri": "https://upload.wikimedia.org/wikipedia/commons/2/23/Thermally_Agitated_Molecule.gif",
+                    "buttons": [
                       {
-                        "card": {
-                          "title": "card title",
-                          "subtitle": "card text",
-                          "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
-                          "buttons": [
-                            {
-                              "text": "button text",
-                              "postback": "https://assistant.google.com/"
-                            }
-                          ]
-                        }
+                        "text": "Temperature Wikipedia Page",
+                        "postback": "https://en.wikipedia.org/wiki/Temperature"
                       }
-                    ],
-                    "suggestions": [
-                        {
-                          "title": "Kelvin"
-                        },
-                        {
-                          "title": "Rankine"
-                        },
-                        {
-                          "title": "Cancel"
-                        }
-                      ]
-        });
+                    ]
+                  }
+                },
+                {
+                  "text": {
+                    "text": [
+                      "I can convert Celsuis to Fahrenheit and Fahrenheit to Celsius! What temperature would you like to convert?"
+                    ]
+                  }
+                },
+                {
+                  "quickReplies": {
+                    "quickReplies": [
+                      "27° Celsius",
+                      "-40° Fahrenheit",
+                      "Cancel"
+                    ]
+                  }
+                }
+              ]
+                
+               });
         res.end();
     }
 
-    if(req.body.queryResult.parameters['type']=='list'){
+    if(req.body.queryResult.parameters['list']){
 
         res.status(200).json({
-            "fulfillmentText": "This is a example of list",
-                    "fulfillmentMessages": [
+            "fulfillmentMessages": [
+                {
+                  "text": {
+                    "text": [
+                      "Welcome to the temperature converter!"
+                    ]
+                  }
+                },
+                {
+                  "card": {
+                    "title": "Vibrating molecules",
+                    "subtitle": "Did you know that temperature is really just a measure of how fast molecules are vibrating around?! 😱",
+                    "imageUri": "https://upload.wikimedia.org/wikipedia/commons/2/23/Thermally_Agitated_Molecule.gif",
+                    "buttons": [
                       {
-                        "card": {
-                          "title": "List",
-                          "subtitle": "card text",
-                          "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
-                          "buttons": [
-                            {
-                              "text": "button text",
-                              "postback": "https://assistant.google.com/"
-                            }
-                          ]
-                        }
+                        "text": "Temperature Wikipedia Page",
+                        "postback": "https://en.wikipedia.org/wiki/Temperature"
                       }
-                    ],
-                    "suggestions": [
-                        {
-                          "title": "Kelvin"
-                        },
-                        {
-                          "title": "Rankine"
-                        },
-                        {
-                          "title": "Cancel"
-                        }
-                      ]
+                    ]
+                  }
+                },
+                {
+                  "text": {
+                    "text": [
+                      "I can convert Celsuis to Fahrenheit and Fahrenheit to Celsius! What temperature would you like to convert?"
+                    ]
+                  }
+                },
+                {
+                  "quickReplies": {
+                    "quickReplies": [
+                      "27° Celsius",
+                      "-40° Fahrenheit",
+                      "Cancel"
+                    ]
+                  }
+                }
+              ]
+                    
         });
         res.end();
     }
     else{
         res.status(200).json({
-            "fulfillmentText": "nothing special",
+            
             "suggestions": [
                 {
                   "title": "Kelvin"
